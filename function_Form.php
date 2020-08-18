@@ -6,6 +6,7 @@ function clean($value = "") {
     $value = stripslashes($value); // Удаление экранирования символов
     $value = strip_tags($value); // Удаление теги html и php
     $value = htmlspecialchars($value); // Преобразование спец.символов в HTML-сущности
+    $value = urldecode($value); // Преобразуем ссылки
     return $value;
 }
 // Длина строки
